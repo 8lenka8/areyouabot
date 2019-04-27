@@ -3,7 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 
-def tw_extract_d(twitter_url,scrolls):
+def tw_extract_d(twitter_url,un,pw,scrolls):
 
     o = webdriver.ChromeOptions()
     o.add_argument('headless')
@@ -11,8 +11,8 @@ def tw_extract_d(twitter_url,scrolls):
     w = webdriver.Chrome(chrome_options=o)
 
     w.get(twitter_url)
-    w.execute_script('document.getElementsByName(\'session[username_or_email]\')[1].setAttribute(\'value\',\'TfukT\')')
-    w.execute_script('document.getElementsByName(\'session[password]\')[1].setAttribute(\'value\',\'TFUK2019!\')')
+    w.execute_script('document.getElementsByName(\'session[username_or_email]\')[1].setAttribute(\'value\',\''+ un +'\')')
+    w.execute_script('document.getElementsByName(\'session[password]\')[1].setAttribute(\'value\',\''+ pw +'\')')
     sleep(1)
     w.execute_script('document.getElementsByClassName(\'submit EdgeButton EdgeButton--primary EdgeButtom--medium\')[0].click()')
     
