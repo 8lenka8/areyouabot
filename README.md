@@ -1,2 +1,2 @@
 # areyouabot
-Hackathon work to stop bot 
+Initially likely to want to store key words and data filtering
